@@ -5,14 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SteganoGraphyUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="391" Width="525">
     <Grid>
-        <TextBox x:Name="input" HorizontalAlignment="Left" Height="86" Margin="20,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="497"/>
-        <Label x:Name="label_Copy" Content="Input" HorizontalAlignment="Left" Margin="20,137,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="path" HorizontalAlignment="Left" Height="23" Margin="10,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="497"/>
-        <Button x:Name="button1" Content="Write" HorizontalAlignment="Left" Margin="102,137,0,0" VerticalAlignment="Top" Width="205" Click="button1_Click"/>
-        <Button x:Name="button1_Copy" Content="Read" HorizontalAlignment="Left" Margin="312,137,0,0" VerticalAlignment="Top" Width="205" Click="button1_Copy_Click"/>
-        <TextBox x:Name="out" HorizontalAlignment="Left" Height="23" Margin="10,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="497"/>
+        <TextBox x:Name="input" AcceptsReturn="True" HorizontalAlignment="Left" Height="196" Margin="10,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="497" KeyDown="input_KeyDown" TextChanged="input_TextChanged"/>
+        <TextBox x:Name="path" HorizontalAlignment="Left" Height="23" Margin="102,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="319"/>
+        <Button x:Name="write" Content="Write" HorizontalAlignment="Left" Margin="11,72,0,0" VerticalAlignment="Top" Width="242" Click="button1_Click"/>
+        <Button x:Name="read" Content="Read" HorizontalAlignment="Left" Margin="258,72,0,0" VerticalAlignment="Top" Width="249" Click="button1_Copy_Click"/>
+        <TextBox x:Name="out" HorizontalAlignment="Left" Height="23" Margin="102,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="319" TextChanged="out_TextChanged"/>
+        <Button x:Name="button1_Copy1" Content="Load" HorizontalAlignment="Left" Margin="426,16,0,0" VerticalAlignment="Top" Width="81" Click="load"/>
+        <Button x:Name="button1_Copy2" Content="Save" HorizontalAlignment="Left" Margin="426,41,0,0" VerticalAlignment="Top" Width="81" Click="button1_Click"/>
+        <Label x:Name="label_Copy1" Content="Input image:" HorizontalAlignment="Left" Margin="11,13,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy2" Content="Output image:" HorizontalAlignment="Left" Margin="11,41,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label" Content="Current characters:" HorizontalAlignment="Left" Margin="10,291,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lasbel" Content="Max characters:" HorizontalAlignment="Left" Margin="11,317,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="current" Content="0" HorizontalAlignment="Left" Margin="168,291,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="max" Content="0" HorizontalAlignment="Left" Margin="168,317,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

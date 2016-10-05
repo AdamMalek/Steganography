@@ -28,6 +28,7 @@ namespace SteganoGraphy
             try
             {
                 img = new Bitmap(path);
+                return (img.Width * img.Height) / 4 - 50;
                 loadedImage = File.ReadAllBytes(path);
                 return loadedImage.Length;
             }
@@ -40,7 +41,7 @@ namespace SteganoGraphy
         {
             try
             {
-                if (loadedImage == null) throw new NoFileLoadedException();
+                if (img == null && loadedImage == null) throw new NoFileLoadedException();
                 //File.WriteAllBytes(path, loadedImage);
                 img.Save(path,System.Drawing.Imaging.ImageFormat.Bmp);
             }

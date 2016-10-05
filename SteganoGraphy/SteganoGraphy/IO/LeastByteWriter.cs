@@ -52,7 +52,7 @@ namespace SteganoGraphy.IO
         public Bitmap WriteMessage(Bitmap img, string message)
         {
             var msg = Encoding.UTF8.GetBytes(message);
-            if (msg.Last() != 0)
+            if (msg.Length == 0 || msg.Last() != 0)
             {
                 var msg2 = msg.ToList();
                 msg2.Add(0);
